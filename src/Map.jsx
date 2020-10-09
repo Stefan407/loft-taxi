@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Map() {
+export const Map = () => {
   return (
     <div className="map-page">
       <h1>Карта</h1>
@@ -8,4 +8,3 @@ function Map() {
   );
 }
 
-export default Map;

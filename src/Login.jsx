@@ -1,8 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './Login-form.css';
-
-function Login() {
+const Login = () => {
   return (
     <div className="login-page">
       <div className="login-page_item">
@@ -31,5 +30,4 @@ function Login() {
     </div>
   );
 }
-
 export default Login;

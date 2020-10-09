@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './Login-form.css';
 
-function Registration() {
+export const Registration = () => {
   return (
     <div className="login-page">
       <div className="login-page_item">
@@ -39,5 +39,3 @@ function Registration() {
     </div>
   );
 }
-
-export default Registration;
