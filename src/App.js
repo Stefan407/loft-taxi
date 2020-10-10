@@ -1,19 +1,19 @@
 import React from 'react';
 import logoHeader from './logo-header.svg';
-// import { Map } from './Map';
+import { Map } from './Map';
 import Login from './Login';
-// import { Registration } from './Registration';
-// import { Profile } from './Profile';
+import { Registration } from './Registration';
+import { Profile } from './Profile';
 import './Header.css';
 
 const PAGES = {
-  // map: <Map />,
+  map: <Map />,
   login: <Login />,
-  // registration: <Registration />,
-  // profile: <Profile />
+  registration: <Registration />,
+  profile: <Profile />
 }
 
-class App extends React.Component() {
+class App extends React.Component {
 
   state = { currentPage: "login" };
 
