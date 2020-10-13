@@ -2,7 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './Login-form.css';
 
+
 const Login = (props) => {
+  const goToMap = () => {
+    props.navigate('map')
+  }
   return (
     <div className="login-page" >
       <div className="login-page_item">
@@ -11,7 +15,7 @@ const Login = (props) => {
         </a>
         <div className="login-page_right">
           <h1>Войти</h1>
-          <form onSubmit={(event) => { event.preventDefault(); props.navigate('map') }}>
+          <form onSubmit={goToMap}>
             <div className="new-user_text">
               <span>Новый пользователь? </span>
               <a onClick={(event) => { props.navigate('registration') }}>Зарегистрируйтесь</a>
