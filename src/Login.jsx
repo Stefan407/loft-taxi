@@ -4,7 +4,8 @@ import './Login-form.css';
 
 
 const Login = (props) => {
-  const goToMap = () => {
+  const goToMap = (event) => {
+    event.preventDefault();
     props.navigate('map')
   }
   return (

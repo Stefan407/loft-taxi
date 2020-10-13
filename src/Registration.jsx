@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './Login-form.css';
 
 const Registration = (props) => {
-  const goToMap = () => {
+  const goToMap = (умуте) => {
     props.navigate('map')
   }
   return (
