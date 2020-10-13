@@ -1,19 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './Login-form.css';
-const Login = () => {
+
+const Login = (props) => {
   return (
-    <div className="login-page">
+    <div className="login-page" >
       <div className="login-page_item">
         <a href="/" className="login-page_left">
           <img src={logo} />
         </a>
         <div className="login-page_right">
           <h1>Войти</h1>
-          <form>
+          <form onSubmit={(event) => { event.preventDefault(); props.navigate('map') }}>
             <div className="new-user_text">
               <span>Новый пользователь? </span>
-              <a>Зарегистрируйтесь</a>
+              <a onClick={(event) => { props.navigate('registration') }}>Зарегистрируйтесь</a>
             </div>
             <label className="email_type">
               <input name="username" placeholder="Имя пользователя *" required="" type="text" />

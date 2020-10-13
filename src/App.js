@@ -2,26 +2,26 @@ import React from 'react';
 import logoHeader from './logo-header.svg';
 import { Map } from './Map';
 import Login from './Login';
-import { Registration } from './Registration';
+import Registration from './Registration';
 import { Profile } from './Profile';
 import './Header.css';
 
-const PAGES = {
-  map: <Map />,
-  login: <Login />,
-  registration: <Registration />,
-  profile: <Profile />
-}
 
 class App extends React.Component {
-
   state = { currentPage: "login" };
 
   navigateTo = (page) => {
-    this.setState({ currentPage: page });
+    this.setState({ currentPage: page })
   }
 
   render() {
+    const PAGES = {
+      map: <Map />,
+      login: <Login navigate={this.navigateTo} />,
+      registration: <Registration navigate={this.navigateTo} />,
+      profile: <Profile />
+    };
+
     return (<div>
       <header className="header">
         <div className="container">

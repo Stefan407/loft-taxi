@@ -2,19 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './Login-form.css';
 
-export const Registration = () => {
+const Registration = (props) => {
+
   return (
-    <div className="login-page">
+    <div className="login-page" >
       <div className="login-page_item">
         <a href="/" className="login-page_left">
           <img src={logo} />
         </a>
         <div className="login-page_right">
           <h1>Регистрация</h1>
-          <form>
+          <form onSubmit={(event) => { event.preventDefault(); props.navigate('map') }}>
             <div className="new-user_text">
               <span>Уже зарегестрированы? </span>
-              <a>Войти</a>
+              <a onClick={(event) => { props.navigate('login') }}>Войти</a>
             </div>
             <label className="email_type">
               <input name="username" placeholder="Адрес электронной почты *" required="" type="text" />
@@ -39,3 +40,4 @@ export const Registration = () => {
     </div>
   );
 }
+export default Registration;
