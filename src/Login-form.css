@@ -39,13 +39,16 @@
   margin-bottom: 30px;
 }
 
-.login-page_right .new-user_text a {
+.login-page_right .new-user_text button {
   color: #1473e6;
   cursor: pointer;
   transition: 0.3s;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
-.login-page_right .new-user_text a:hover {
+.login-page_right .new-user_text button:hover {
   color: #828282;
 }
 

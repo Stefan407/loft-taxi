@@ -14,7 +14,7 @@
   display: flex;
 }
 
-.header .header_item .header_menu-list a {
+.header .header_item .header_menu-list button {
   color: rgba(0, 0, 0, 0.87);
   padding: 6px 16px;
   font-size: 0.875rem;
@@ -34,9 +34,12 @@
   text-transform: none;
   cursor: pointer;
   transition: 0.3s;
+  border: none;
+  background: transparent;
+  outline: none;
 }
 
-.header .header_item .header_menu-list a:hover {
+.header .header_item .header_menu-list button:hover {
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.08);
 }

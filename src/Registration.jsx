@@ -1,23 +1,24 @@
 import React from 'react';
+import WithAuth from './AuthContext';
 import logo from './logo.svg';
 import './Login-form.css';
 
 const Registration = (props) => {
-  const goToMap = (умуте) => {
+  const goToMap = (event) => {
     props.navigate('map')
   }
   return (
     <div className="login-page" >
       <div className="login-page_item">
         <a href="/" className="login-page_left">
-          <img src={logo} />
+          <img src={logo} alt="test"/>
         </a>
         <div className="login-page_right">
           <h1>Регистрация</h1>
           <form onSubmit={goToMap}>
             <div className="new-user_text">
               <span>Уже зарегестрированы? </span>
-              <a onClick={(event) => { props.navigate('login') }}>Войти</a>
+              <button onClick={(event) => { props.navigate('login') }}>Войти</button>
             </div>
             <label className="email_type">
               <input name="username" placeholder="Адрес электронной почты *" required="" type="text" />
@@ -42,4 +43,5 @@ const Registration = (props) => {
     </div>
   );
 }
-export default Registration;
+const RegistrationWithAuth = WithAuth(Registration);
+export default RegistrationWithAuth
