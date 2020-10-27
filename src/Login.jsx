@@ -2,6 +2,7 @@ import React from 'react';
 import WithAuth from './AuthContext';
 import logo from './logo.svg';
 import './Login-form.css';
+import PropTypes from 'prop-types';
 
 
 export const Login = (props) => {
@@ -13,6 +14,9 @@ export const Login = (props) => {
   const goToProfile = (event) => {
     props.navigate('profile')
   }
+  LoginWithAuth.propTypes = {
+    navigate: PropTypes.func
+  };
   return (
     <div>
       {props.isLoggedIn ?

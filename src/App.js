@@ -25,14 +25,14 @@ class App extends React.Component {
       registration: <RegistrationWithAuth navigate={this.navigateTo} />,
       profile: <ProofileWithAuth navigate={this.navigateTo} />
     };
-
+    
     return (
       <div>
         <header className="header">
           <div className="container">
             <div className="header_item">
               <a href="/" className="header_logo">
-                <img src={logoHeader} alt="test"/>
+                <img src={logoHeader} alt="test" />
               </a>
               <div className="header_menu-list">
                 <button className="header_menu-item" onClick={() => { this.navigateTo("map") }}>Карта</button>

@@ -2,16 +2,20 @@ import React from 'react';
 import WithAuth from './AuthContext';
 import logo from './logo.svg';
 import './Login-form.css';
+import PropTypes from 'prop-types';
 
 const Registration = (props) => {
   const goToMap = (event) => {
     props.navigate('map')
   }
+  RegistrationWithAuth.propTypes = {
+    navigate: PropTypes.func
+  };
   return (
     <div className="login-page" >
       <div className="login-page_item">
         <a href="/" className="login-page_left">
-          <img src={logo} alt="test"/>
+          <img src={logo} alt="test" />
         </a>
         <div className="login-page_right">
           <h1>Регистрация</h1>

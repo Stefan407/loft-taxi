@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import WithAuth from './AuthContext';
 import mapboxgl from 'mapbox-gl';
+import PropTypes from 'prop-types';
+
 
 export class Map extends Component {
   mapContainer = React.createRef();
@@ -16,6 +18,9 @@ export class Map extends Component {
   componentWillUnmount() {
     this.map.remove()
   }
+  static propTypes = {
+    navigate: PropTypes.func
+  };
   render() {
     return <div className="map-wrapper">
       <div data-test-id="map" className="map" ref={this.mapContainer}></div>
